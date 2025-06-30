@@ -58,7 +58,7 @@ h1{
     align-items: center;
     padding: 2rem;
     font-family: 'Segoe UI', sans-serif;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 
@@ -114,4 +114,32 @@ h1{
 .delete i {
     pointer-events: none;
     font-size: 1rem;
+}
+.edit{
+    margin-left: 1rem;
+    padding: 0.6rem 0.9rem;
+    background-color: #0ecb73;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.edit i{
+    pointer-events: none;
+    font-size: 1rem;
+}
+.edit-input {
+    font-size: 1rem;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0;            /* Fix unexpected spacing */
+    outline: none;
+    width: 100%;
+}
+
+.task-content {
+    display: inline-block;
+    margin: 0;
 }
