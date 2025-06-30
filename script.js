@@ -18,8 +18,11 @@ function makeTasks(content){
             <i class="fa-solid fa-trash"></i>
         </button>
     `;
-    task.querySelector(".delete").addEventListener("click", function () {
-        task.remove();
+    task.querySelector(".delete").addEventListener("click", function(e){
+        deleteTask(e);
     });
     ul.appendChild(task);
+}
+function deleteTask(e) {
+    e.target.closest(".task").remove();
 }
