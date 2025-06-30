@@ -4,9 +4,22 @@ let ul=document.getElementById("taskList");
 subBtn.addEventListener("click",function(e){ 
     e.preventDefault();
     let task=input.value;
-    let li=document.createElement("li");
-    li.innerText=task;
-    li.classList.add("task")
-    ul.appendChild(li);
+    if(task.trim() === "")
+        return;
+    makeTasks(task);
     input.value="";
 });
+function makeTasks(content){
+    let task=document.createElement("li");
+    task.classList.add("task");
+    task.innerHTML=`
+        <span class="task-content">${content}</span>
+        <button type="button" class="delete">
+            <i class="fa-solid fa-trash"></i>
+        </button>
+    `;
+    task.querySelector(".delete").addEventListener("click", function () {
+        task.remove();
+    });
+    ul.appendChild(task);
+}
