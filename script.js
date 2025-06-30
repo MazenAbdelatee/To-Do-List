@@ -27,8 +27,8 @@ function makeTasks(content){
     task.querySelector(".delete").addEventListener("click", ()=> deleteTask(task));
     ul.appendChild(task);
 }
-function deleteTask(e) {
-    e.target.closest(".task").remove();
+function deleteTask(taskElement) {
+    taskElement.remove();
 }
 
 function enableEdit(taskElement) {
